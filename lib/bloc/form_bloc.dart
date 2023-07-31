@@ -19,6 +19,9 @@ class FormBloc extends Bloc<FormEvent, FormState> {
 }
 
 bool checkIfInputsAreValid(String? input1, String? input2) {
+  input1 = input1?.trim();
+  input2 = input2?.trim();
+
   if (input1 == null || input1.isEmpty) {
     return false;
   }
